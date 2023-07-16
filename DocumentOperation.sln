@@ -5,15 +5,19 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.API", "DocumentOperation\DocumentOperation.API.csproj", "{AE485AE9-9DD5-4684-9129-5881233983EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Data", "Data\DocumentOperation.Data.csproj", "{F76E1A85-8E5D-4462-9AE0-3FD109018A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Data", "Data\DocumentOperation.Data.csproj", "{F76E1A85-8E5D-4462-9AE0-3FD109018A45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Scheduler", "Scheduler\DocumentOperation.Scheduler.csproj", "{71B87DFF-7177-4D3A-B249-9996982F4D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Scheduler", "Scheduler\DocumentOperation.Scheduler.csproj", "{71B87DFF-7177-4D3A-B249-9996982F4D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Logging", "Logging\DocumentOperation.Logging.csproj", "{CE8D46AF-1070-4790-8175-F4F36554FFD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Logging", "Logging\DocumentOperation.Logging.csproj", "{CE8D46AF-1070-4790-8175-F4F36554FFD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Email", "Email\DocumentOperation.Email.csproj", "{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Email", "Email\DocumentOperation.Email.csproj", "{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Tests", "Tests\DocumentOperation.Tests.csproj", "{F5F7C9A2-6485-4204-810A-86B8BCB04784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Services", "DcumentOperation.Services\DocumentOperation.Services.csproj", "{5AA45492-A2F1-4D13-955C-5526898267D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Core", "DocumentOperation.Core\DocumentOperation.Core.csproj", "{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA45492-A2F1-4D13-955C-5526898267D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA45492-A2F1-4D13-955C-5526898267D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA45492-A2F1-4D13-955C-5526898267D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA45492-A2F1-4D13-955C-5526898267D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

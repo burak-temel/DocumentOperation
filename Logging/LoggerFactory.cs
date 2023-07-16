@@ -6,13 +6,16 @@ namespace Logging
 {
     public class LoggerFactory
     {
-        public static ILogger ConfigureLogger()
+        public static ILogger ConfigureLogger<T>()
         {
             var logger = new LoggerConfiguration()
                 .WriteTo.Console()
                 .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
                 .MinimumLevel.Debug()
-                .CreateLogger();
+                .CreateLogger()
+                .ForContext<T>();
+
+            Log.Logger = logger; // Set the global logger instance
 
             return logger;
         }

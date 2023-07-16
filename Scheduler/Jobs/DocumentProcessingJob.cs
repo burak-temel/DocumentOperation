@@ -1,12 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocumentOperation.Core;
+using DocumentOperation.Services;
+using Quartz;
+using Serilog;
 
-namespace DocumentOperation.Scheduler.Jobs
+public class DocumentProcessingJob : IJob
 {
-    internal class DocumentProcessingJob
+    private readonly DocumentService _documentService;
+
+    public DocumentProcessingJob(DocumentService documentService)
     {
+        _documentService = documentService;
+    }
+
+    public async Task Execute(IJobExecutionContext context)
+    {
+        try
+        {
+            // Query the database or document storage to retrieve the unprocessed documents
+            var unprocessedInvoices = await _documentService.GetUnprocessedDocuments();
+
+            foreach (var invoice in unprocessedInvoices)
+            {
+                // Update the status of the invoice to "Processing"
+                await _documentService.UpdateDocumentStatus(invoice.Id, DocumentStatus.Processing);
+
+                // Prepare the email notification
+                var emailContent = $"The invoice {invoice.InvoiceId} containing {invoice.InvoiceLines.Count} items has been successfully processed";
+
+                // Send the email notification using the email service or library
+                //await _emailService.SendEmail(invoice.Email, "Invoice Processing Notification", emailContent);
+
+                // Update the status of the invoice to "Processed"
+                await _documentService.UpdateDocumentStatus(invoice.Id, DocumentStatus.Processed);
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions that occur during the job execution
+            Log.Error(ex, "An error occurred during document processing job execution.");
+        }
     }
 }

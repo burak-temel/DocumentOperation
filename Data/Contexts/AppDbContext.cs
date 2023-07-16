@@ -1,8 +1,5 @@
-﻿// AppDbContext.cs
-
-using DocumentOperation.Data.Entities;
+﻿using DocumentOperation.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using DocumentOperation.Data.Entities;
 
 namespace DocumentOperation.Data.Contexts
 {
@@ -20,13 +17,20 @@ namespace DocumentOperation.Data.Contexts
         {
             // Configure the relationships and additional configurations for the entities
             modelBuilder.Entity<Invoice>()
-                .HasOne(i => i.InvoiceHeader)
-                .WithOne()
-                .HasForeignKey<InvoiceHeader>(ih => ih.InvoiceId)
-                .OnDelete(DeleteBehavior.Cascade);
+                        .HasKey(i => i.InvoiceId);
+
+            modelBuilder.Entity<InvoiceHeader>()
+                        .HasKey(ih => ih.InvoiceId);
+
+            modelBuilder.Entity<Invoice>()
+                        .HasOne(i => i.InvoiceHeader)
+                        .WithOne()
+                        .HasForeignKey<InvoiceHeader>(ih => ih.InvoiceId)
+                        .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<InvoiceDetail>()
-                .HasKey(id => new { id.InvoiceId });
+                        .HasKey(id => new { id.Id, id.InvoiceId });
+
 
             // Other configurations...
 
