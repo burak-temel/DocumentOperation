@@ -1,10 +1,9 @@
 using AutoMapper;
 using DocumentOperation.API.Models;
-using DocumentOperation.Services;
 using DocumentOperation.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Quartz;
-using Quartz.Impl;
+using DocumentOperation.ServiceContracts;
+using Serilog;
 
 namespace DocumentOperation.API.Controllers
 {
@@ -12,10 +11,10 @@ namespace DocumentOperation.API.Controllers
     [Route("api/documents")]
     public class DocumentController : ControllerBase
     {
-        private readonly DocumentService _documentService;
+        private readonly IDocumentService _documentService;
         private readonly IMapper _mapper;
 
-        public DocumentController(DocumentService documentService, IMapper mapper)
+        public DocumentController(IDocumentService documentService, IMapper mapper)
         {
             _documentService = documentService;
             _mapper = mapper;
@@ -23,9 +22,9 @@ namespace DocumentOperation.API.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadDocument(Document document)
+        public async Task<IActionResult> UploadDocument(InvoiceViewModel document)
         {
-
+            Log.Information("Scheduling job");
             var invoice = _mapper.Map<Invoice>(document);
 
             // Call the DocumentService to process and save the document
@@ -39,6 +38,8 @@ namespace DocumentOperation.API.Controllers
         [HttpGet("headers")]
         public async Task<IActionResult> GetDocumentHeaders()
         {
+            Log.Information("Scheduling job");
+
             // Retrieve the list of document headers from the DocumentService
             var headers =await _documentService.GetDocumentHeaders();
             // Return the document headers as a response

@@ -1,11 +1,12 @@
 ﻿using DocumentOperation.Core;
 using DocumentOperation.Data.Contexts;
 using DocumentOperation.Data.Entities;
+using DocumentOperation.ServiceContracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace DocumentOperation.Services
 {
-    public class DocumentService
+    public class DocumentService: IDocumentService
     {
         private readonly AppDbContext _dbContext;
 
@@ -37,7 +38,7 @@ namespace DocumentOperation.Services
         public async Task<List<Invoice>> GetUnprocessedDocuments()
         {
             // Query the database to retrieve unprocessed documents
-            var unprocessedDocument = await _dbContext.Invoices.Include(i=> i.InvoiceLines)
+            var unprocessedDocument = await _dbContext.Invoices.Include(i=> i.InvoiceLines).Include(i=> i.InvoiceHeader)
                 .Where(document => document.Status == (int)DocumentStatus.Unprocessed).OrderBy(i => i.Id).ToListAsync();
 
             return unprocessedDocument;

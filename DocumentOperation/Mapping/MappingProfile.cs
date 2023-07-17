@@ -9,17 +9,17 @@ namespace DocumentOperation.API.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Invoice, Document>()
+            CreateMap<Invoice, InvoiceViewModel>()
                 .ForMember(dest => dest.InvoiceHeader, opt => opt.MapFrom(src => src.InvoiceHeader))
                 .ForMember(dest => dest.InvoiceLine, opt => opt.MapFrom(src => src.InvoiceLines));
 
-            CreateMap<Document, Invoice>()
+            CreateMap<InvoiceViewModel, Invoice>()
                 .ForMember(dest => dest.InvoiceHeader, opt => opt.MapFrom(src => src.InvoiceHeader))
                 .ForMember(dest => dest.InvoiceLines, opt => opt.MapFrom(src => src.InvoiceLine))
                 .ForMember(dest => dest.InvoiceId, opt => opt.MapFrom(src => src.InvoiceHeader.InvoiceId));
 
-            CreateMap<DocumentHeader, InvoiceHeader>(); // Adjusted mapping
-            CreateMap<DocumentDetail, InvoiceDetail>(); // Adjusted mapping
+            CreateMap<InvoiceHeaderViewModel, InvoiceHeader>(); // Adjusted mapping
+            CreateMap<InvoiceDetailViewModel, InvoiceDetail>(); // Adjusted mapping
 
         }
     }

@@ -3,8 +3,8 @@ using DocumentOperation.Services;
 using DocumentOperation.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Quartz;
-using Quartz.Impl;
-
+using Serilog;
+using DocumentOperation.ServiceContracts;
 
 internal class Program
 {
@@ -16,7 +16,13 @@ internal class Program
             .AddJsonFile("appsettings.json")
             .AddEnvironmentVariables();
 
-        builder.Services.AddTransient<DocumentService>();
+        builder.Services.AddTransient<IDocumentService, DocumentService>();
+        builder.Services.AddTransient<IEmailService, EmailService>();
+        builder.Services.AddTransient<DocumentProcessingJob>();
+        builder.Services.AddQuartz(options =>
+        {
+            options.UseMicrosoftDependencyInjectionScopedJobFactory();
+        });
 
         builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -39,7 +45,15 @@ internal class Program
         app.UseAuthorization();
         app.MapControllers();
 
+        #region Logging
+        Log.Logger = Logging.LoggerFactory.ConfigureLogger<Program>();
+        #endregion
+
         #region Quartz
+        // Get the Quartz.NET scheduler factory
+        var schedulerFactory = app.Services.GetRequiredService<ISchedulerFactory>();
+        var scheduler = await schedulerFactory.GetScheduler();
+
         // Create a job detail for the DocumentProcessingJob
         var jobDetail = JobBuilder.Create<DocumentProcessingJob>()
             .WithIdentity("DocumentProcessingJob", "DocumentGroup")
@@ -48,21 +62,22 @@ internal class Program
         // Create a trigger with the desired Cron Expression or interval
         var trigger = TriggerBuilder.Create()
             .WithIdentity("DocumentProcessingTrigger", "DocumentGroup")
-            .WithCronSchedule("0 0 8 ? * MON-FRI") // Example Cron Expression: Run at 8:00 AM from Monday to Friday
+            .StartNow()
+            .WithSimpleSchedule(x => x
+                .WithIntervalInMinutes(2) // Run every second
+                .RepeatForever())
             .Build();
 
-        // Get the scheduler from the scheduler factory
-        var schedulerFactory = new StdSchedulerFactory();
-        var scheduler = await schedulerFactory.GetScheduler();
-
         // Schedule the job with the trigger
+        Log.Information("Scheduling job");
         await scheduler.ScheduleJob(jobDetail, trigger);
+        Log.Information("Job scheduled");
 
+        Log.Information("Starting Quartz.NET scheduler");
         await scheduler.Start();
+        Log.Information("Quartz.NET scheduler started");
         #endregion
 
         app.Run();
-
     }
-
 }

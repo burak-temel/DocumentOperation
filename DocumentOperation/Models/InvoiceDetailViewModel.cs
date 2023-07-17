@@ -1,6 +1,6 @@
 ﻿namespace DocumentOperation.API.Models
 {
-    public class DocumentDetail
+    public class InvoiceDetailViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

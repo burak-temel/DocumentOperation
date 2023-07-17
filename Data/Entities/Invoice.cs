@@ -9,7 +9,7 @@ namespace DocumentOperation.Data.Entities
         public int Id { get; set; }
 
         public string InvoiceId { get; set; }
-        public int Status { get; set; }
+        public int Status { get; set; } = 1;
         public InvoiceHeader InvoiceHeader { get; set; }
         public List<InvoiceDetail> InvoiceLines { get; set; }
     }

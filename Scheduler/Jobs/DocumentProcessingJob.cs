@@ -1,15 +1,18 @@
 ﻿using DocumentOperation.Core;
+using DocumentOperation.ServiceContracts;
 using DocumentOperation.Services;
 using Quartz;
 using Serilog;
 
 public class DocumentProcessingJob : IJob
 {
-    private readonly DocumentService _documentService;
+    private readonly IDocumentService _documentService;
+    private readonly IEmailService _emailService;
 
-    public DocumentProcessingJob(DocumentService documentService)
+    public DocumentProcessingJob(IDocumentService documentService, IEmailService emailService)
     {
         _documentService = documentService;
+        _emailService = emailService;
     }
 
     public async Task Execute(IJobExecutionContext context)
@@ -27,8 +30,8 @@ public class DocumentProcessingJob : IJob
                 // Prepare the email notification
                 var emailContent = $"The invoice {invoice.InvoiceId} containing {invoice.InvoiceLines.Count} items has been successfully processed";
 
-                // Send the email notification using the email service or library
-                //await _emailService.SendEmail(invoice.Email, "Invoice Processing Notification", emailContent);
+                //Send the email notification using the email service or library
+               await _emailService.SendEmail(invoice.InvoiceHeader.Email, "Invoice Processing Notification", emailContent);
 
                 // Update the status of the invoice to "Processed"
                 await _documentService.UpdateDocumentStatus(invoice.Id, DocumentStatus.Processed);
@@ -39,5 +42,7 @@ public class DocumentProcessingJob : IJob
             // Handle any exceptions that occur during the job execution
             Log.Error(ex, "An error occurred during document processing job execution.");
         }
+
+        await Task.CompletedTask;
     }
 }

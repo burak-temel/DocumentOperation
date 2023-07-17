@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Castle.Core" Version="5.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Serilog" Version="3.0.1" />
+    <ProjectReference Include="..\Data\DocumentOperation.Data.csproj" />
+    <ProjectReference Include="..\DocumentOperation.Core\DocumentOperation.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Data\DocumentOperation.Data.csproj" />
     <ProjectReference Include="..\DocumentOperation.Core\DocumentOperation.Core.csproj" />
+    <ProjectReference Include="..\DocumentOperation.ServiceContracts\DocumentOperation.ServiceContracts.csproj" />
   </ItemGroup>
 
 </Project>

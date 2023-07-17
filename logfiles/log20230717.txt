@@ -1,0 +1,5 @@
+2023-07-17 17:13:41.283 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-17 17:13:41.320 +03:00 [INF] Scheduling job
+2023-07-17 17:13:41.328 +03:00 [INF] Job scheduled
+2023-07-17 17:13:41.330 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-17 17:13:41.334 +03:00 [INF] Quartz.NET scheduler started

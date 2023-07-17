@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 
 namespace DocumentOperation.API.Models
 {
-    public class DocumentHeader
+    public class InvoiceHeaderViewModel
     {
         public string InvoiceId { get; set; }
         public string SenderTitle { get; set; }
