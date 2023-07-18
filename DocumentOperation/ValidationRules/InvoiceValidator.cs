@@ -1,16 +1,20 @@
-﻿using DocumentOperation.Data.Entities;
+﻿using DocumentOperation.API.Models;
+using DocumentOperation.Data.Entities;
 using FluentValidation;
-using System.Reflection.Metadata;
 
 namespace DocumentOperation.API.ValidationRules
 {
-    public class InvoiceValidator: AbstractValidator<Document>
+    public class InvoiceValidator : AbstractValidator<InvoiceViewModel>
     {
         public InvoiceValidator()
         {
-            //RuleFor(model => model.Property1).NotEmpty().WithMessage("Property1 is required.");
-            //RuleFor(model => model.Property2).Length(1, 10).WithMessage("Property2 must be between 1 and 10 characters.");
-            // Add more validation rules as needed
+            RuleFor(x => x.InvoiceHeader).NotNull().WithMessage("InvoiceHeader is required.");
+            RuleFor(x => x.InvoiceHeader).SetValidator(new InvoiceHeaderValidator()); // Use the InvoiceHeaderValidator here
+
+            // Use RuleForEach to validate each InvoiceDetail in InvoiceLines using InvoiceDetailValidator
+            RuleForEach(x => x.InvoiceLine)
+                .SetValidator(new InvoiceDetailValidator());
         }
     }
 }
+

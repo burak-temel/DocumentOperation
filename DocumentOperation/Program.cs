@@ -5,6 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Quartz;
 using Serilog;
 using DocumentOperation.ServiceContracts;
+using FluentValidation.AspNetCore;
+using Quartz.Spi;
+using DocumentOperation.API.Models;
+using DocumentOperation.API.ValidationRules;
+using FluentValidation;
 
 internal class Program
 {
@@ -16,9 +21,12 @@ internal class Program
             .AddJsonFile("appsettings.json")
             .AddEnvironmentVariables();
 
-        builder.Services.AddTransient<IDocumentService, DocumentService>();
+        builder.Services.AddTransient<IInvoiceService, InvoiceService>();
         builder.Services.AddTransient<IEmailService, EmailService>();
         builder.Services.AddTransient<DocumentProcessingJob>();
+        #region FluentValidation
+
+        #endregion
         builder.Services.AddQuartz(options =>
         {
             options.UseMicrosoftDependencyInjectionScopedJobFactory();
@@ -26,9 +34,26 @@ internal class Program
 
         builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            
         builder.Services.AddAutoMapper(typeof(MappingProfile));
-        builder.Services.AddControllers();
+        //builder.Services.AddControllers()
+        //    .ConfigureApiBehaviorOptions(options =>
+        //    {
+        //        options.SuppressModelStateInvalidFilter = true;
+        //    })
+        //    .AddFluentValidation();
+
+        // Register FluentValidation validators
+        builder.Services.AddControllers().AddFluentValidation(fv =>
+        {
+            fv.RegisterValidatorsFromAssemblyContaining<InvoiceValidator>();
+            fv.RegisterValidatorsFromAssemblyContaining<InvoiceHeaderValidator>();
+            fv.RegisterValidatorsFromAssemblyContaining<InvoiceDetailValidator>();
+        });
+
+        // Register the custom action filter globally
+        builder.Services.AddScoped<FluentValidatorInterceptor>();
+
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Logging.AddConsole();
@@ -64,7 +89,7 @@ internal class Program
             .WithIdentity("DocumentProcessingTrigger", "DocumentGroup")
             .StartNow()
             .WithSimpleSchedule(x => x
-                .WithIntervalInMinutes(2) // Run every second
+                .WithIntervalInMinutes(2) // Run every 2 minutes
                 .RepeatForever())
             .Build();
 

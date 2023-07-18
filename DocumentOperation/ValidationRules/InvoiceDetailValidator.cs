@@ -7,9 +7,8 @@ namespace DocumentOperation.API.ValidationRules
     {
         public InvoiceDetailValidator()
         {
-            //RuleFor(x => x.FirstName).NotEmpty().WithMessage("First Name is required.");
-            //RuleFor(x => x.LastName).NotEmpty().WithMessage("Last Name is required.");
-            //RuleFor(x => x.Email).NotEmpty().EmailAddress().WithMessage("Invalid Email Address.");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Name is required.");
+            RuleFor(x => x.UnitCode).NotEmpty().WithMessage("UnitCode is required.");
         }
     }
 }

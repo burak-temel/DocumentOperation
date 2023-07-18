@@ -6,10 +6,10 @@ using Serilog;
 
 public class DocumentProcessingJob : IJob
 {
-    private readonly IDocumentService _documentService;
+    private readonly IInvoiceService _documentService;
     private readonly IEmailService _emailService;
 
-    public DocumentProcessingJob(IDocumentService documentService, IEmailService emailService)
+    public DocumentProcessingJob(IInvoiceService documentService, IEmailService emailService)
     {
         _documentService = documentService;
         _emailService = emailService;
@@ -28,7 +28,7 @@ public class DocumentProcessingJob : IJob
                 await _documentService.UpdateDocumentStatus(invoice.Id, DocumentStatus.Processing);
 
                 // Prepare the email notification
-                var emailContent = $"The invoice {invoice.InvoiceId} containing {invoice.InvoiceLines.Count} items has been successfully processed";
+                var emailContent = $"The invoice {invoice.InvoiceId} containing {invoice.InvoiceLine.Count} items has been successfully processed";
 
                 //Send the email notification using the email service or library
                await _emailService.SendEmail(invoice.InvoiceHeader.Email, "Invoice Processing Notification", emailContent);

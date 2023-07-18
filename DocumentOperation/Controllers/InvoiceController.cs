@@ -4,17 +4,19 @@ using DocumentOperation.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using DocumentOperation.ServiceContracts;
 using Serilog;
+using DocumentOperation.Core;
 
 namespace DocumentOperation.API.Controllers
 {
     [ApiController]
     [Route("api/documents")]
-    public class DocumentController : ControllerBase
+    [TypeFilter(typeof(FluentValidatorInterceptor))]
+    public class InvoiceController : ControllerBase
     {
-        private readonly IDocumentService _documentService;
+        private readonly IInvoiceService _documentService;
         private readonly IMapper _mapper;
 
-        public DocumentController(IDocumentService documentService, IMapper mapper)
+        public InvoiceController(IInvoiceService documentService, IMapper mapper)
         {
             _documentService = documentService;
             _mapper = mapper;
@@ -25,7 +27,7 @@ namespace DocumentOperation.API.Controllers
         public async Task<IActionResult> UploadDocument(InvoiceViewModel document)
         {
             Log.Information("Scheduling job");
-            var invoice = _mapper.Map<Invoice>(document);
+            var invoice = _mapper.Map<InvoiceDataModel>(document);
 
             // Call the DocumentService to process and save the document
             await _documentService.UploadDocument(invoice);

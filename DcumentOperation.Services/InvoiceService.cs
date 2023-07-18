@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DocumentOperation.Services
 {
-    public class DocumentService: IDocumentService
+    public class InvoiceService: IInvoiceService
     {
         private readonly AppDbContext _dbContext;
 
-        public DocumentService(AppDbContext dbContext)
+        public InvoiceService(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task UploadDocument(Invoice invoice)
+        public async Task UploadDocument(InvoiceDataModel invoice)
         {
             // Perform any necessary validation or preprocessing
             // Save the document and related entities to the database using the database context
@@ -24,21 +24,21 @@ namespace DocumentOperation.Services
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<InvoiceHeader>> GetDocumentHeaders()
+        public async Task<List<InvoiceHeaderDataModel>> GetDocumentHeaders()
         {
             return await _dbContext.InvoiceHeaders.ToListAsync();
         }
 
-        public async Task<List<InvoiceDetail>> GetDocumentDetails(string invoiceId)
+        public async Task<List<InvoiceDetailDataModel>> GetDocumentDetails(string invoiceId)
         {
             return await _dbContext.InvoiceDetails
                 .Where(i => i.InvoiceId == invoiceId).ToListAsync();
         }
 
-        public async Task<List<Invoice>> GetUnprocessedDocuments()
+        public async Task<List<InvoiceDataModel>> GetUnprocessedDocuments()
         {
             // Query the database to retrieve unprocessed documents
-            var unprocessedDocument = await _dbContext.Invoices.Include(i=> i.InvoiceLines).Include(i=> i.InvoiceHeader)
+            var unprocessedDocument = await _dbContext.Invoices.Include(i=> i.InvoiceLine).Include(i=> i.InvoiceHeader)
                 .Where(document => document.Status == (int)DocumentStatus.Unprocessed).OrderBy(i => i.Id).ToListAsync();
 
             return unprocessedDocument;

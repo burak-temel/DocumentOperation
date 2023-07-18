@@ -1,0 +1,209 @@
+2023-07-18 00:01:50.642 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:01:50.675 +03:00 [INF] Scheduling job
+2023-07-18 00:01:50.683 +03:00 [INF] Job scheduled
+2023-07-18 00:01:50.684 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:01:50.688 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:05:00.670 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:05:00.703 +03:00 [INF] Scheduling job
+2023-07-18 00:05:00.710 +03:00 [INF] Job scheduled
+2023-07-18 00:05:00.711 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:05:00.715 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:06:44.280 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:06:44.321 +03:00 [INF] Scheduling job
+2023-07-18 00:06:44.331 +03:00 [INF] Job scheduled
+2023-07-18 00:06:44.332 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:06:44.337 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:08:07.944 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:08:07.975 +03:00 [INF] Scheduling job
+2023-07-18 00:08:07.981 +03:00 [INF] Job scheduled
+2023-07-18 00:08:07.982 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:08:07.986 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:13:49.187 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:13:49.218 +03:00 [INF] Scheduling job
+2023-07-18 00:13:49.225 +03:00 [INF] Job scheduled
+2023-07-18 00:13:49.226 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:13:49.230 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:16:03.964 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 00:16:03.996 +03:00 [INF] Scheduling job
+2023-07-18 00:16:04.003 +03:00 [INF] Job scheduled
+2023-07-18 00:16:04.004 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 00:16:04.009 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 00:18:01.889 +03:00 [INF] Scheduling job
+2023-07-18 10:08:36.467 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 10:08:36.515 +03:00 [INF] Scheduling job
+2023-07-18 10:08:36.522 +03:00 [INF] Job scheduled
+2023-07-18 10:08:36.523 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 10:08:36.528 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 10:09:30.907 +03:00 [INF] Scheduling job
+2023-07-18 10:09:50.323 +03:00 [INF] Scheduling job
+2023-07-18 10:55:51.975 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 10:55:52.003 +03:00 [INF] Scheduling job
+2023-07-18 10:55:52.010 +03:00 [INF] Job scheduled
+2023-07-18 10:55:52.011 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 10:55:52.016 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 10:58:40.383 +03:00 [INF] Scheduling job
+2023-07-18 11:00:32.912 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:00:32.942 +03:00 [INF] Scheduling job
+2023-07-18 11:00:32.948 +03:00 [INF] Job scheduled
+2023-07-18 11:00:32.949 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:00:32.953 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:03:12.010 +03:00 [INF] Scheduling job
+2023-07-18 11:03:41.295 +03:00 [INF] Scheduling job
+2023-07-18 11:04:23.480 +03:00 [INF] Scheduling job
+2023-07-18 11:04:30.202 +03:00 [INF] Scheduling job
+2023-07-18 11:04:35.016 +03:00 [INF] Scheduling job
+2023-07-18 11:08:06.864 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:08:06.898 +03:00 [INF] Scheduling job
+2023-07-18 11:08:06.905 +03:00 [INF] Job scheduled
+2023-07-18 11:08:06.906 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:08:06.910 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:08:25.458 +03:00 [INF] Scheduling job
+2023-07-18 11:11:00.619 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:11:00.650 +03:00 [INF] Scheduling job
+2023-07-18 11:11:00.657 +03:00 [INF] Job scheduled
+2023-07-18 11:11:00.658 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:11:00.665 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:11:18.398 +03:00 [INF] Scheduling job
+2023-07-18 11:11:39.072 +03:00 [INF] Scheduling job
+2023-07-18 11:17:34.415 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:17:34.448 +03:00 [INF] Scheduling job
+2023-07-18 11:17:34.455 +03:00 [INF] Job scheduled
+2023-07-18 11:17:34.456 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:17:34.460 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:17:35.686 +03:00 [ERR] An error occurred during document processing job execution.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'InvoiceDetailId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at DocumentOperation.Services.InvoiceService.GetUnprocessedDocuments() in C:\Users\burak\source\repos\DocumentOperation\DcumentOperation.Services\InvoiceService.cs:line 41
+   at DocumentProcessingJob.Execute(IJobExecutionContext context) in C:\Users\burak\source\repos\DocumentOperation\Scheduler\Jobs\DocumentProcessingJob.cs:line 23
+ClientConnectionId:1aae1695-153a-4e00-ab6a-9a4acb05bb9b
+Error Number:207,State:1,Class:16
+2023-07-18 11:18:00.312 +03:00 [INF] Scheduling job
+2023-07-18 11:19:34.545 +03:00 [ERR] An error occurred during document processing job execution.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'InvoiceDetailId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at DocumentOperation.Services.InvoiceService.GetUnprocessedDocuments() in C:\Users\burak\source\repos\DocumentOperation\DcumentOperation.Services\InvoiceService.cs:line 41
+   at DocumentProcessingJob.Execute(IJobExecutionContext context) in C:\Users\burak\source\repos\DocumentOperation\Scheduler\Jobs\DocumentProcessingJob.cs:line 23
+ClientConnectionId:1aae1695-153a-4e00-ab6a-9a4acb05bb9b
+Error Number:207,State:1,Class:16
+2023-07-18 11:19:43.434 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:19:43.467 +03:00 [INF] Scheduling job
+2023-07-18 11:19:43.473 +03:00 [INF] Job scheduled
+2023-07-18 11:19:43.475 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:19:43.479 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:19:44.698 +03:00 [ERR] An error occurred during document processing job execution.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'InvoiceDetailId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at DocumentOperation.Services.InvoiceService.GetUnprocessedDocuments() in C:\Users\burak\source\repos\DocumentOperation\DcumentOperation.Services\InvoiceService.cs:line 41
+   at DocumentProcessingJob.Execute(IJobExecutionContext context) in C:\Users\burak\source\repos\DocumentOperation\Scheduler\Jobs\DocumentProcessingJob.cs:line 23
+ClientConnectionId:c8c5045d-de2e-4c10-8cd6-9164f6ce88ee
+Error Number:207,State:1,Class:16
+2023-07-18 11:21:22.010 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:21:22.041 +03:00 [INF] Scheduling job
+2023-07-18 11:21:22.048 +03:00 [INF] Job scheduled
+2023-07-18 11:21:22.049 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:21:22.053 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:21:23.299 +03:00 [ERR] An error occurred during document processing job execution.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'InvoiceDetailId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at DocumentOperation.Services.InvoiceService.GetUnprocessedDocuments() in C:\Users\burak\source\repos\DocumentOperation\DcumentOperation.Services\InvoiceService.cs:line 41
+   at DocumentProcessingJob.Execute(IJobExecutionContext context) in C:\Users\burak\source\repos\DocumentOperation\Scheduler\Jobs\DocumentProcessingJob.cs:line 23
+ClientConnectionId:5ccf46e0-6366-482e-b6ed-5c2fcbf6b853
+Error Number:207,State:1,Class:16
+2023-07-18 11:22:17.263 +03:00 [INF] Scheduling job
+2023-07-18 11:23:22.141 +03:00 [ERR] An error occurred during document processing job execution.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'InvoiceDetailId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at DocumentOperation.Services.InvoiceService.GetUnprocessedDocuments() in C:\Users\burak\source\repos\DocumentOperation\DcumentOperation.Services\InvoiceService.cs:line 41
+   at DocumentProcessingJob.Execute(IJobExecutionContext context) in C:\Users\burak\source\repos\DocumentOperation\Scheduler\Jobs\DocumentProcessingJob.cs:line 23
+ClientConnectionId:5ccf46e0-6366-482e-b6ed-5c2fcbf6b853
+Error Number:207,State:1,Class:16
+2023-07-18 11:24:39.957 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:24:39.988 +03:00 [INF] Scheduling job
+2023-07-18 11:24:39.994 +03:00 [INF] Job scheduled
+2023-07-18 11:24:39.995 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:24:39.998 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:25:01.411 +03:00 [INF] Scheduling job
+2023-07-18 11:39:26.448 +03:00 [INF] Scheduling job
+2023-07-18 11:39:31.133 +03:00 [INF] Scheduling job
+2023-07-18 11:42:44.761 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:42:44.794 +03:00 [INF] Scheduling job
+2023-07-18 11:42:44.800 +03:00 [INF] Job scheduled
+2023-07-18 11:42:44.801 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:42:44.805 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:50:01.742 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:50:01.774 +03:00 [INF] Scheduling job
+2023-07-18 11:50:01.781 +03:00 [INF] Job scheduled
+2023-07-18 11:50:01.782 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:50:01.786 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:55:40.684 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 11:55:40.716 +03:00 [INF] Scheduling job
+2023-07-18 11:55:40.723 +03:00 [INF] Job scheduled
+2023-07-18 11:55:40.724 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 11:55:40.728 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 11:56:02.370 +03:00 [INF] Scheduling job
+2023-07-18 12:00:22.732 +03:00 [INF] Scheduling job

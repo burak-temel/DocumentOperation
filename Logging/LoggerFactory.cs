@@ -6,7 +6,7 @@ namespace Logging
     {
         public static ILogger ConfigureLogger<T>()
         {
-            var logDirectory = $"../logfiles";
+            var logDirectory = $"../Logging/logfiles";
 
             // Create the log directory if it doesn't exist
             Directory.CreateDirectory(logDirectory);

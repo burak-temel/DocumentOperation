@@ -4,13 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DocumentOperation.Data.Entities
 {
-    public class Invoice
+    public class InvoiceDataModel
     {
         public int Id { get; set; }
-
         public string InvoiceId { get; set; }
         public int Status { get; set; } = 1;
-        public InvoiceHeader InvoiceHeader { get; set; }
-        public List<InvoiceDetail> InvoiceLines { get; set; }
+        public InvoiceHeaderDataModel InvoiceHeader { get; set; }
+        public List<InvoiceDetailDataModel> InvoiceLine { get; set; }
     }
 }

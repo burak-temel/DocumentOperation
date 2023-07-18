@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DocumentOperation.Data.Entities
 {
-    public class InvoiceHeader
+    public class InvoiceHeaderDataModel
     {
         public int Id { get; set; }
         public string InvoiceId { get; set; }
