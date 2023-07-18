@@ -46,7 +46,6 @@ namespace DocumentOperation.Services
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur during email sending
                 Console.WriteLine($"An error occurred while sending the email: {ex.Message}");
             }
         }

@@ -36,7 +36,6 @@ namespace DocumentOperation.Services
 
         public async Task<List<InvoiceDataModel>> GetUnprocessedDocuments()
         {
-            // Query the database to retrieve unprocessed documents
             var unprocessedDocument = await _dbContext.Invoices.Include(i => i.InvoiceLine).Include(i => i.InvoiceHeader)
                 .Where(document => document.Status == (int)DocumentStatus.Unprocessed).OrderBy(i => i.Id).ToListAsync();
 

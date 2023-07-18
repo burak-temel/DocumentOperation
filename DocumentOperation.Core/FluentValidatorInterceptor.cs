@@ -24,23 +24,17 @@ public class FluentValidatorInterceptor : IActionFilter
         if (model == null)
             return false;
 
-        // Get the model's type
         var modelType = model.GetType();
 
-        // Get the validator type for the model
         var validatorType = typeof(IValidator<>).MakeGenericType(modelType);
 
-        // Resolve the validator using the DI container
         var validator = context.HttpContext.RequestServices.GetService(validatorType);
 
-        // If the validator is not found, return true (consider model as valid)
         if (validator == null)
             return true;
 
-        // Invoke the Validate method on the validator
         var validationResult = ((dynamic)validator).Validate((dynamic)model);
 
-        // Check if the validation result is valid
         return validationResult.IsValid;
     }
 }
