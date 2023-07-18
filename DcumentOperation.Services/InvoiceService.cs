@@ -3,10 +3,12 @@ using DocumentOperation.Data.Contexts;
 using DocumentOperation.Data.Entities;
 using DocumentOperation.ServiceContracts;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Core;
 
 namespace DocumentOperation.Services
 {
-    public class InvoiceService: IInvoiceService
+    public class InvoiceService : IInvoiceService
     {
         private readonly AppDbContext _dbContext;
 
@@ -17,9 +19,6 @@ namespace DocumentOperation.Services
 
         public async Task UploadDocument(InvoiceDataModel invoice)
         {
-            // Perform any necessary validation or preprocessing
-            // Save the document and related entities to the database using the database context
-
             await _dbContext.Invoices.AddAsync(invoice);
             await _dbContext.SaveChangesAsync();
         }
@@ -38,7 +37,7 @@ namespace DocumentOperation.Services
         public async Task<List<InvoiceDataModel>> GetUnprocessedDocuments()
         {
             // Query the database to retrieve unprocessed documents
-            var unprocessedDocument = await _dbContext.Invoices.Include(i=> i.InvoiceLine).Include(i=> i.InvoiceHeader)
+            var unprocessedDocument = await _dbContext.Invoices.Include(i => i.InvoiceLine).Include(i => i.InvoiceHeader)
                 .Where(document => document.Status == (int)DocumentStatus.Unprocessed).OrderBy(i => i.Id).ToListAsync();
 
             return unprocessedDocument;
@@ -55,7 +54,7 @@ namespace DocumentOperation.Services
             }
             else
             {
-                //throw new NotFoundException("Document not found."); // Custom exception for document not found
+                Log.Information($"Document not found with invoice Id{id}.");
             }
         }
     }

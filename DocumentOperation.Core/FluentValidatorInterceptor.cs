@@ -9,12 +9,7 @@ public class FluentValidatorInterceptor : IActionFilter
     {
         var model = context.ActionArguments.Values.FirstOrDefault();
 
-        if (context.ActionDescriptor.Parameters.Count == 0)
-        {
-            return;
-        }
-
-        if (model == null || !IsValidModel(model, context))
+        if (context.ActionDescriptor.Parameters.Count != 0 && (model == null || !IsValidModel(model, context)))
         {
             context.Result = new BadRequestObjectResult("Invalid model data.");
         }

@@ -13,13 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Logging",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Email", "Email\DocumentOperation.Email.csproj", "{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Tests", "Tests\DocumentOperation.Tests.csproj", "{F5F7C9A2-6485-4204-810A-86B8BCB04784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Services", "DcumentOperation.Services\DocumentOperation.Services.csproj", "{5AA45492-A2F1-4D13-955C-5526898267D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Services", "DcumentOperation.Services\DocumentOperation.Services.csproj", "{5AA45492-A2F1-4D13-955C-5526898267D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.Core", "DocumentOperation.Core\DocumentOperation.Core.csproj", "{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.Core", "DocumentOperation.Core\DocumentOperation.Core.csproj", "{FDDB1230-DC67-4DD6-ACAE-E5CA66953C26}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentOperation.ServiceContracts", "DocumentOperation.ServiceContracts\DocumentOperation.ServiceContracts.csproj", "{C6E7BD7B-EC23-40E3-B2B2-A574B1D1B866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentOperation.ServiceContracts", "DocumentOperation.ServiceContracts\DocumentOperation.ServiceContracts.csproj", "{C6E7BD7B-EC23-40E3-B2B2-A574B1D1B866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBDE250B-DD2C-4A81-89D6-CA76C5318A4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5F7C9A2-6485-4204-810A-86B8BCB04784}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AA45492-A2F1-4D13-955C-5526898267D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AA45492-A2F1-4D13-955C-5526898267D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA45492-A2F1-4D13-955C-5526898267D1}.Release|Any CPU.ActiveCfg = Release|Any CPU

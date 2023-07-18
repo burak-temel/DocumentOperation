@@ -207,3 +207,56 @@ Error Number:207,State:1,Class:16
 2023-07-18 11:55:40.728 +03:00 [INF] Quartz.NET scheduler started
 2023-07-18 11:56:02.370 +03:00 [INF] Scheduling job
 2023-07-18 12:00:22.732 +03:00 [INF] Scheduling job
+2023-07-18 12:21:47.362 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 12:21:47.415 +03:00 [INF] Scheduling job
+2023-07-18 12:21:47.425 +03:00 [INF] Job scheduled
+2023-07-18 12:21:47.426 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 12:21:47.433 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 12:25:40.681 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 12:25:40.736 +03:00 [INF] Scheduling job
+2023-07-18 12:25:40.751 +03:00 [INF] Job scheduled
+2023-07-18 12:25:40.754 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 12:25:40.762 +03:00 [INF] Quartz.NET scheduler started
+2023-07-18 12:26:15.231 +03:00 [INF] Scheduling job
+2023-07-18 12:26:20.549 +03:00 [ERR] An unhandled exception occurred.
+System.Exception: deneme
+   at DocumentOperation.API.Controllers.InvoiceController.UploadDocument(InvoiceViewModel document) in C:\Users\burak\source\repos\DocumentOperation\DocumentOperation\Controllers\InvoiceController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-07-18 12:28:16.619 +03:00 [INF] GetDocumentHeaders
+2023-07-18 12:28:16.688 +03:00 [ERR] An unhandled exception occurred.
+System.Exception: deneme
+   at DocumentOperation.Services.InvoiceService.GetDocumentHeaders()
+   at DocumentOperation.API.Controllers.InvoiceController.GetDocumentHeaders()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-07-18 12:28:30.958 +03:00 [INF] GetDocumentHeaders
+2023-07-18 12:28:31.021 +03:00 [ERR] An unhandled exception occurred.
+System.Exception: deneme1
+   at DocumentOperation.Services.InvoiceService.GetDocumentHeaders()
+   at DocumentOperation.API.Controllers.InvoiceController.GetDocumentHeaders()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-07-18 14:53:30.375 +03:00 [INF] Adding 0 jobs, 0 triggers.
+2023-07-18 14:53:30.446 +03:00 [INF] Scheduling job
+2023-07-18 14:53:30.455 +03:00 [INF] Job scheduled
+2023-07-18 14:53:30.456 +03:00 [INF] Starting Quartz.NET scheduler
+2023-07-18 14:53:30.460 +03:00 [INF] Quartz.NET scheduler started

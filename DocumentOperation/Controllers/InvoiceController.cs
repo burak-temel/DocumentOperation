@@ -26,41 +26,30 @@ namespace DocumentOperation.API.Controllers
         [HttpPost("upload")]
         public async Task<IActionResult> UploadDocument(InvoiceViewModel document)
         {
-            Log.Information("Scheduling job");
             var invoice = _mapper.Map<InvoiceDataModel>(document);
-
-            // Call the DocumentService to process and save the document
             await _documentService.UploadDocument(invoice);
 
-
-            // Return a successful response
             return Ok();
         }
 
         [HttpGet("headers")]
         public async Task<IActionResult> GetDocumentHeaders()
         {
-            Log.Information("Scheduling job");
+            Log.Information("GetDocumentHeaders");
 
-            // Retrieve the list of document headers from the DocumentService
             var headers =await _documentService.GetDocumentHeaders();
-            // Return the document headers as a response
             return Ok(headers);
         }
        
         [HttpGet("/details")]
         public async Task<IActionResult> GetDocumentDetails(string invoiceId)
         {
-            // Retrieve the document details from the DocumentService based on the provided ID
             var details = await _documentService.GetDocumentDetails(invoiceId);
 
-            if (details == null)
+            if (!details.Any())
             {
-                // Return a 404 Not Found response if the document details are not found
                 return NotFound();
             }
-
-            // Return the document details as a response
             return Ok(details);
         }
     }

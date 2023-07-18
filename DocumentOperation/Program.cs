@@ -34,22 +34,20 @@ internal class Program
 
         builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            
+
         builder.Services.AddAutoMapper(typeof(MappingProfile));
-        //builder.Services.AddControllers()
-        //    .ConfigureApiBehaviorOptions(options =>
-        //    {
-        //        options.SuppressModelStateInvalidFilter = true;
-        //    })
-        //    .AddFluentValidation();
 
         // Register FluentValidation validators
-        builder.Services.AddControllers().AddFluentValidation(fv =>
-        {
-            fv.RegisterValidatorsFromAssemblyContaining<InvoiceValidator>();
-            fv.RegisterValidatorsFromAssemblyContaining<InvoiceHeaderValidator>();
-            fv.RegisterValidatorsFromAssemblyContaining<InvoiceDetailValidator>();
-        });
+        builder.Services.AddControllers(options =>
+                        {
+                            options.Filters.Add<GeneralExceptionFilter>();
+                        })
+                        .AddFluentValidation(fv =>
+                                                {
+                                                    fv.RegisterValidatorsFromAssemblyContaining<InvoiceValidator>();
+                                                    fv.RegisterValidatorsFromAssemblyContaining<InvoiceHeaderValidator>();
+                                                    fv.RegisterValidatorsFromAssemblyContaining<InvoiceDetailValidator>();
+                                                });
 
         // Register the custom action filter globally
         builder.Services.AddScoped<FluentValidatorInterceptor>();
